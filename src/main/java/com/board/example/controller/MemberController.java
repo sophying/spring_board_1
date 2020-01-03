@@ -25,14 +25,14 @@ private static final Logger logger = LoggerFactory.getLogger(MemberController.cl
 	StudyEnrollService studyService;
 	
 	//1. 회원가입 get  : register.jsp 로 이동 화면 띄움 
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public void getRegister() throws Exception{
 		logger.info("---------------get register");
 		
 	}
 	
 	//2. 회원가입 post  : 가입정보를 입력 후 가입버튼을 눌렀을 경우  ( 값을 전달 )
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "register", method = RequestMethod.POST)
 	public String postRegister(MemberVO memberVO) throws Exception{
 		logger.info("---------------post register");
 		
@@ -42,14 +42,14 @@ private static final Logger logger = LoggerFactory.getLogger(MemberController.cl
 	}
 	
 	// 3. Study Enroll get
-	@RequestMapping(value = "/enroll2",method = RequestMethod.GET)
+	@RequestMapping(value = "/study_boo3",method = RequestMethod.GET)
 	public void getEnroll() throws Exception{
 		logger.info("---------------get Enroll");
 		
 	}
 	
 	// Study Enroll post
-	@RequestMapping(value = "/enroll2", method = RequestMethod.POST)
+	@RequestMapping(value = "/study_boo3", method = RequestMethod.POST)
 	public String postEnroll(StudyEnrollVO studyEnrollVO) throws Exception{
 		logger.info("---------------post Enroll");
 		studyService.enroll(studyEnrollVO);

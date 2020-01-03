@@ -6,12 +6,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	.inputArea { margin:10px 0; }
-	select { width:100px; }
-	label { display:inline-block; width:70px; padding:5px; }
-	label[for='gdsDes'] { display:block; }
-	input { width:150px; }
-	textarea#gdsDes { width:400px; height:180px; }
+.inputArea { margin:10px 0; }
+select { width:100px; }
+label { display:inline-block; width:70px; padding:5px; }
+label[for='gdsDes'] { display:block; }
+input { width:150px; }
+textarea#gdsDes { width:400px; height:180px; }
 </style>
 </head>
 <body>
@@ -52,6 +52,7 @@
 <div class="inputArea">
  <button type="submit" id="register_Btn" class="btn btn-primary">등록</button>
 </div>
+
 </form>
 </body>
 </html>
