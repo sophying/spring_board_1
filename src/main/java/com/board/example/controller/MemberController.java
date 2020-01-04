@@ -42,14 +42,14 @@ private static final Logger logger = LoggerFactory.getLogger(MemberController.cl
 	}
 	
 	// 3. Study Enroll get
-	@RequestMapping(value = "/enroll",method = RequestMethod.GET)
+	@RequestMapping(value = "/study_enroll1",method = RequestMethod.GET)
 	public void getEnroll() throws Exception{
 		logger.info("---------------get Enroll");
 		
 	}
 	
 	// Study Enroll post
-	@RequestMapping(value = "/enroll", method = RequestMethod.POST)
+	@RequestMapping(value = "/study_enroll1", method = RequestMethod.POST)
 	public String postEnroll(StudyEnrollVO studyEnrollVO) throws Exception{
 		logger.info("---------------post Enroll");
 		studyService.enroll(studyEnrollVO);
