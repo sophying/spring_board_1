@@ -62,7 +62,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	$(document).ready(function(){
 		
 		$('#enroll').click(function() {
-			location.href="/member/enroll";
+			window.location.href="/member/study_enroll1";
 		});
 		
 		$('#modify').click(function() {
