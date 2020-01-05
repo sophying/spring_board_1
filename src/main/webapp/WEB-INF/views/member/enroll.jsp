@@ -1,7 +1,8 @@
 <%@page import="com.fasterxml.jackson.annotation.JsonInclude.Include"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -171,6 +172,7 @@ label{
           <td colspan="2">
           	<input class="detail" id="place" type="text" name="place">
           	<!-- <input type="button" id="defaultText" value="추후결정"/> -->
+          	<input type="button" id="defaultText" value="추후결정"/>
           </td>
         </tr>
         <tr>
@@ -235,7 +237,7 @@ $(document).ready(function(){
 	});
 	
 	$("#defaultText").click(function(){
-		document.getElementById("place").innerHTML = "<input value='추후결정'/>";
+		document.getElementById("place").value = "추후결정";
 	});
 });
 
