@@ -61,7 +61,6 @@
                 <div class="input-group d-flex justify-content-center">
                     <!-- <input type="file" class="form-control" name="name" id="name" placeholder="Enter your Name" /> -->
                     <img id="input_img"src="../resources/imgs/studyUs.png" alt="">
-
                 </div>
               </div>
             </div>
@@ -104,48 +103,52 @@
           <input type="date" class="form-control col-sm-8 " name="date" id="end" placeholder="그룹의 스터디 주제를 알려주세요!" />
     </div>
     <div class="form-group">
-
            <div class="cols-sm-10">
               <div class="input-group d-flex justify-content-center ">
                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                 <!-- Material inline 1 -->
+                	<!-- 월요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                       <input type="checkbox" class="form-check-input" id="mon" name="day">
                       <label class="form-check-label" for="mon">월</label>
                     </div>
 
-                    <!-- Material inline 2 -->
+                    <!-- 화요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="tue" name="day">
                         <label class="form-check-label" for="tue">화</label>
                     </div>
 
-                    <!-- Material inline 3 -->
+                    <!-- 수요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="wed" name="day">
                         <label class="form-check-label" for="wed">수</label>
                     </div>
-                    <!-- Material inline 3 -->
+                    
+                    <!-- 목요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="thu" name="day">
                         <label class="form-check-label" for="thu">목</label>
                     </div>
-                    <!-- Material inline 3 -->
+                    
+                    <!-- 금요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="fri" name="day">
                         <label class="form-check-label" for="fri">금</label>
                     </div>
-                    <!-- Material inline 3 -->
+                    
+                    <!--  토요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="sat" name="day">
                         <label class="form-check-label" for="sat">토</label>
                     </div>
-                    <!-- Material inline 3 -->
+                    
+                    <!-- 일요일 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="sun" name="day">
                         <label class="form-check-label" for="sun">일</label>
                     </div>
-                    <!-- Material inline 3 -->
+                    
+                    <!-- 추후결정 -->
                     <div class="form-check form-check-inline cols-sm-2">
                         <input type="checkbox" class="form-check-input" id="other" name="day">
                         <label class="form-check-label" for="other">추후결정</label>
@@ -188,7 +191,6 @@
                               </div>
                       </div>
                       <div class="form-group">
-
                           <label for="username" class="cols-sm-2 control-label font-weight-bold">카테고리</label>
                           <div class="cols-sm-10">
                             <div class="input-group">
@@ -196,12 +198,6 @@
                               <input type="text" class="form-control" name="category" id="category" placeholder="과목 카테고리를 알려주세요!" />
                         </div>
                       </div>
-                             <!-- <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                       <input type="text" class="form-control" name="category" id="category" placeholder="Enter study category" />
-                                </div>
-                             </div> -->
                       </div>
                       <div class="form-group">
                           <label for="username" class="cols-sm-2 control-label font-weight-bold">스터디 주제</label>
