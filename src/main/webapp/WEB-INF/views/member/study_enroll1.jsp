@@ -17,7 +17,7 @@
 
 .btn-circle.btn-xl {
   width: 60px;
-  height: 60px;
+  height: 60px; 
   padding: 5px 5px 5px 5px;
   border-radius: 35px;
   font-size: 24px;
