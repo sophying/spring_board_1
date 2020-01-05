@@ -3,22 +3,43 @@ package com.board.example.domain;
 import java.util.Date;
 
 public class StudyEnrollVO {
-
-	private int bno;
-	private String userId;
-	private String category;
-	private String title;
-	private Date sDate;
-	private Date eDate;
-	private String studyDay;
-	private String place;
-	private String content;
+/*
+	SNO					   NOT NULL NUMBER
+	 USERID 				   NOT NULL VARCHAR2(20)
+	 USERPASS				   NOT NULL VARCHAR2(100)
+	 EMAIL						    VARCHAR2(30)
+	 CATEGORY				   NOT NULL VARCHAR2(15)
+	 STITLE 				   NOT NULL VARCHAR2(50)
+	 STARTDATE					    DATE
+	 ENDDATE					    DATE
+	 SDAY					   NOT NULL VARCHAR2(25)
+	 SPLACE 					    VARCHAR2(60)
+	 SCONTENT				   NOT NULL VARCHAR2(1000)
+*/
 	
-	public int getBno() {
-		return bno;
+	private int post;
+	private String roadAddress;
+	private String jibunAddress;
+	
+	
+	private int sno;
+	private String userId;
+	private String userPass;
+	private String email;
+	private String category;
+	private String stitle;
+	private Date startDate;
+	private Date endDate;
+	private String sDay;
+	private String sPlace;
+	private String sContent;
+		
+	
+	public int getSno() {
+		return sno;
 	}
-	public void setBno(int bno) {
-		this.bno = bno;
+	public void setSno(int sno) {
+		this.sno = sno;
 	}
 	public String getUserId() {
 		return userId;
@@ -26,50 +47,81 @@ public class StudyEnrollVO {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+	public String getUserPass() {
+		return userPass;
+	}
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getCategory() {
 		return category;
 	}
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getTitle() {
-		return title;
+	public String getStitle() {
+		return stitle;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setStitle(String stitle) {
+		this.stitle = stitle;
 	}
-	public Date getsDate() {
-		return sDate;
+	public Date getStartDate() {
+		return startDate;
 	}
-	public void setsDate(Date sDate) {
-		this.sDate = sDate;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
-	public Date geteDate() {
-		return eDate;
+	public Date getEndDate() {
+		return endDate;
 	}
-	public void seteDate(Date eDate) {
-		this.eDate = eDate;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
-	public String getStudyDay() {
-		return studyDay;
+	public String getsDay() {
+		return sDay;
 	}
-	public void setStudyDay(String studyDay) {
-		this.studyDay = studyDay;
+	public void setsDay(String sDay) {
+		this.sDay = sDay;
 	}
-	public String getPlace() {
-		return place;
+	public String getsPlace() {
+		return sPlace;
 	}
-	public void setPlace(String place) {
-		this.place = place;
+	public void setsPlace(String sPlace) {
+		this.sPlace = sPlace;
 	}
-	public String getContent() {
-		return content;
+	public String getsContent() {
+		return sContent;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setsContent(String sContent) {
+		this.sContent = sContent;
 	}
-
 	
+	
+/* 우편번호  */	
+	public int getPost() {
+		return post;
+	}
+	public void setPost(int post) {
+		this.post = post;
+	}
+	public String getRoadAddress() {
+		return roadAddress;
+	}
+	public void setRoadAddress(String roadAddress) {
+		this.roadAddress = roadAddress;
+	}
+	public String getJibunAddress() {
+		return jibunAddress;
+	}
+	public void setJibunAddress(String jibunAddress) {
+		this.jibunAddress = jibunAddress;
+	}
 	
 	
 }

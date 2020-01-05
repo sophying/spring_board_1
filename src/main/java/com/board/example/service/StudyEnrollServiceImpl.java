@@ -14,7 +14,7 @@ public class StudyEnrollServiceImpl implements StudyEnrollService{
 	StudyEnrollDAO studyEnrollDAO;
 	
 	@Override
-	public void enroll(StudyEnrollVO studyEnrollVO) throws Exception {
+	public void enroll(StudyEnrollVO studyEnrollVO) throws Exception { 
 		studyEnrollDAO.enroll(studyEnrollVO);
 	}
 

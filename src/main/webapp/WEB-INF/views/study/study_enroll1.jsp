@@ -52,7 +52,7 @@
 <!-- <1> image Enroll -->
   <div class="row mt-3 justify-content-md-center">
     <div class="col-sm-5 d-inline-block"> <!-- 왼쪽 영역 div ( 이미지, 날짜 선택 ) -->
-      <form class="form-horizontal" enctype="multipart/form-data">
+      <form role="form" method="post" class="form-horizontal" enctype="multipart/form-data">
         <div class="form-group container-fluid">
           <div class="card">
             <label for="name" class="pb-1 row m-0 text-justify card-header cols-sm-2 control-label d-flex justify-content-center"><h4>사진등록</h4></label>
@@ -95,12 +95,12 @@
     <div class="input-group d-flex justify-content-center">
        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
           <label for="start" class="cols-sm-2 d-flex p-2 control-label font-weight-bold">시작</label>&nbsp;&nbsp;
-          <input type="date" class="form-control col-sm-8" name="date" id="start" placeholder="그룹의 스터디 주제를 알려주세요!" />
+          <input type="date" class="form-control col-sm-8" name="startDate" id="start" placeholder="그룹의 스터디 주제를 알려주세요!" />
     </div>
     <div class="input-group d-flex justify-content-center">
        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
           <label for="end" class="cols-sm-2 d-flex p-2 control-label font-weight-bold">&nbsp;&nbsp;&nbsp;끝&nbsp;</label>&nbsp;&nbsp;
-          <input type="date" class="form-control col-sm-8 " name="date" id="end" placeholder="그룹의 스터디 주제를 알려주세요!" />
+          <input type="date" class="form-control col-sm-8 " name="endDate" id="end" placeholder="그룹의 스터디 주제를 알려주세요!" />
     </div>
     <div class="form-group">
            <div class="cols-sm-10">
@@ -171,13 +171,13 @@
       <div class="card">
         <div class="pb-1 row m-0 card-header font-weight-bold d-flex justify-content-center"><h4>스터디 모집 등록</h4></div>
           <div class="card-body">
-                  <form class="form-horizontal" method="post" action="#">
+                  <form name="studyForm"class="form-horizontal" role="form" method="post" action="/study/study_enroll1">
                       <div class="form-group">
                           <label for="name" class="cols-sm-2 control-label font-weight-bold">아이디</label>
                               <div class="cols-sm-10">
                                   <div class="input-group">
                                       <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                          <input type="text" class="form-control" name="name" id="userId" placeholder="Enter your Name" />
+                                          <input type="text" class="form-control" name="userId" id="userId" placeholder="Enter your Name" />
                                   </div>
                               </div>
                       </div>
@@ -204,7 +204,7 @@
                              <div class="cols-sm-10">
                                 <div class="input-group">
                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                      <input type="text" class="form-control" name="title" id="title" placeholder="그룹의 스터디 주제를 알려주세요!" />
+                                      <input type="text" class="form-control" name="stitle" id="stitle" placeholder="그룹의 스터디 주제를 알려주세요!" />
                                 </div>
                              </div>
                       </div>
@@ -213,7 +213,7 @@
                              <div class="cols-sm-10">
                                 <div class="input-group">
                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                   <input type="text" class="form-control" name="schedule" id="schedule" placeholder="그룹의 스터디 주제를 알려주세요!" />
+                                   <input type="text" class="form-control" name="sDay" id="schedule" placeholder="그룹의 스터디 주제를 알려주세요!" />
                              </div>
                           </div>
                    </div>
@@ -257,7 +257,7 @@
                         <label for="username" class="cols-sm-2 control-label font-weight-bold">스터디 상세내용</label>
                            <div class="cols-sm-10">
                              <div class="md-form">
-                               <textarea id="form7" class="md-textarea form-control" rows="3" placeholder="그룹을 상세히 설명해주시면 더욱 확실한 그룹원을 모집할 수 있어요!"></textarea>
+                               <textarea id="form7" name="sContent" class="md-textarea form-control" rows="6" placeholder="그룹을 상세히 설명해주시면 더욱 확실한 그룹원을 모집할 수 있어요!"></textarea>
                              </div>
                            </div>
                     </div>
@@ -266,12 +266,12 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="password" class="form-control" name="confirm" id="confirm" placeholder="비밀번호 확인해주세요!" />
+                                        <input type="password" class="form-control" name="userPass" id="userPass" placeholder="비밀번호 확인해주세요!" />
                                 </div>
                             </div>
                       </div>
                       <div class="form-group ">
-                          <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                          <button type="button" id="enroll_btn" class="btn btn-primary btn-lg btn-block login-button">Register</button>
                       </div>
                  </form>
           </div>
@@ -288,7 +288,9 @@ $(document).ready(function($){
 
 // 조건_____________
  
- 
+ $('#enroll_btn').click(function(){
+	 document.studyForm.submit();
+ });
 	
 	
 // 우편번호 검색 ___________________________________________________________

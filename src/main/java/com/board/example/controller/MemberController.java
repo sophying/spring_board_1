@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.board.example.domain.MemberVO;
-import com.board.example.domain.StudyEnrollVO;
 import com.board.example.service.MemberService;
 import com.board.example.service.StudyEnrollService;
 
@@ -41,35 +40,5 @@ private static final Logger logger = LoggerFactory.getLogger(MemberController.cl
 		return "redirect:/";
 	}
 	
-	// 3. Study Enroll get
-<<<<<<< HEAD
-	@RequestMapping(value = "/study_enroll1",method = RequestMethod.GET)
-=======
-	@RequestMapping(value = "/study_boo3",method = RequestMethod.GET)
->>>>>>> refs/remotes/origin/master
-	public void getEnroll() throws Exception{
-		logger.info("---------------get Enroll");
-		
-	}
 	
-	// Study Enroll post
-<<<<<<< HEAD
-	@RequestMapping(value = "/study_enroll1", method = RequestMethod.POST)
-=======
-	@RequestMapping(value = "/study_boo3", method = RequestMethod.POST)
->>>>>>> refs/remotes/origin/master
-	public String postEnroll(StudyEnrollVO studyEnrollVO) throws Exception{
-		logger.info("---------------post Enroll");
-		studyService.enroll(studyEnrollVO);
-
-		return "redirect:/";
-	}
-	
-	// modify StudyEnroll info
-	@RequestMapping(value = "/modify" ,method = RequestMethod.GET)
-	public void getModify() throws Exception{
-		logger.info("---------------get modify");		
-		
-	}
-
 }

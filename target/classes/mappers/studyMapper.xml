@@ -5,8 +5,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="study">
 	<insert id="enroll" parameterType="com.board.example.domain.StudyEnrollVO">
-		insert into study2 (bno, userid, category, title, sdate, edate, studyday, place, content)
-		values((select nvl(max(bno)+1, 1) from study2), #{userId}, #{category}, #{title}, to_date(#{sDate},'yyyy-mm-dd'), to_date(#{eDate},'yyyy-mm-dd'), #{studyDay}, #{place}, #{content})
+	insert into STUDYENROLL (SNO, USERID, USERPASS, EMAIL, CATEGORY, STITLE, STARTDATE, ENDDATE, SDAY, SPLACE, SCONTENT )
+	values( STUDY_SEQ.NEXTVAL , #{userId}, #{userPass}, #{email}, #{category}, #{stitle}, #{startDate}, #{endDate}, #{sDay}, #{sPlace}, #{scontent})
+	
 <!-- 		insert into studytest_1 (bno, userid, category, title, regdate, place, content, photo)
 		values((select nvl(max(bno)+1, 1) from studytest_1), #{userId}, #{category}, #{title}, #{regDate}, #{place}, #{content}, #{photo}) -->
 	</insert>
