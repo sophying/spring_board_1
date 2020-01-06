@@ -38,7 +38,7 @@
       background-color: #E4E4E4;
     }
 	body{
-		background-image:url("../resources/imgs/studymain.webp");
+		/* background-image:url("../resources/imgs/studymain.webp"); */
 		shadow:0 0 10px gray;
 		background-repeat : no-repeat;
 		background-size: 100%;

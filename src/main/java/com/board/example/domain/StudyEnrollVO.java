@@ -1,39 +1,39 @@
 package com.board.example.domain;
 
-import java.util.Date;
-
 public class StudyEnrollVO {
 /*
-	SNO					   NOT NULL NUMBER
-	 USERID 				   NOT NULL VARCHAR2(20)
-	 USERPASS				   NOT NULL VARCHAR2(100)
-	 EMAIL						    VARCHAR2(30)
-	 CATEGORY				   NOT NULL VARCHAR2(15)
-	 STITLE 				   NOT NULL VARCHAR2(50)
-	 STARTDATE					    DATE
-	 ENDDATE					    DATE
-	 SDAY					   NOT NULL VARCHAR2(25)
-	 SPLACE 					    VARCHAR2(60)
-	 SCONTENT				   NOT NULL VARCHAR2(1000)
+    SNO  NUMBER  NOT NULL,
+      USERID VARCHAR2(20)  NOT NULL,
+      USERPASS VARCHAR2(100) NOT NULL,
+      EMAIL  VARCHAR2(30),
+      PHOTO VARCHAR2(20),
+      CATEGORY VARCHAR2(15)  NOT NULL,
+      STITLE VARCHAR2(50)  NOT NULL,
+      STARTDATE  DATE,
+      ENDDATE  DATE,
+      SDAY VARCHAR2(25)  NOT NULL,
+      SPLACE VARCHAR2(70),
+      SCONTENT VARCHAR2(1000)  NOT NULL,
+      PRIMARY KEY(SNO)
+      
+     type 을 맞춰주지 않을 경우 400번 에러 발생 
+	   값을 hidden 으로 전달할 경우 submit 버튼 이벤트 안에서 할 것
 */
-	
-	private int post;
-	private String roadAddress;
-	private String jibunAddress;
-	
-	
+ 
+
 	private int sno;
 	private String userId;
 	private String userPass;
 	private String email;
+	private String photo;
 	private String category;
 	private String stitle;
-	private Date startDate;
-	private Date endDate;
+	private String startDate;
+	private String endDate;
 	private String sDay;
 	private String sPlace;
 	private String sContent;
-		
+	
 	
 	public int getSno() {
 		return sno;
@@ -59,6 +59,12 @@ public class StudyEnrollVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	public String getCategory() {
 		return category;
 	}
@@ -71,18 +77,18 @@ public class StudyEnrollVO {
 	public void setStitle(String stitle) {
 		this.stitle = stitle;
 	}
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
-	}
+	} 
 	public String getsDay() {
 		return sDay;
 	}
@@ -101,27 +107,7 @@ public class StudyEnrollVO {
 	public void setsContent(String sContent) {
 		this.sContent = sContent;
 	}
+		
 	
 	
-/* 우편번호  */	
-	public int getPost() {
-		return post;
 	}
-	public void setPost(int post) {
-		this.post = post;
-	}
-	public String getRoadAddress() {
-		return roadAddress;
-	}
-	public void setRoadAddress(String roadAddress) {
-		this.roadAddress = roadAddress;
-	}
-	public String getJibunAddress() {
-		return jibunAddress;
-	}
-	public void setJibunAddress(String jibunAddress) {
-		this.jibunAddress = jibunAddress;
-	}
-	
-	
-}

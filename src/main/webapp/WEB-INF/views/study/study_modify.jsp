@@ -260,7 +260,7 @@
                            </div>
                     </div>
                       <div class="form-group">
-                         <label for="confirm" class="cols-sm-2 control-label">비밀번호 확인</label>
+                         <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -308,18 +308,6 @@ $(document).ready(function($){
 	 alert(document.getElementById('startDate').value);
 	 alert(document.getElementById('endDate').value);
 	 alert(document.getElementById('sPlace').value);
-	 
-	 
-	 var password = document.getElementById("userPass");
-	 
-	 if (password == null) {
-		
-		 
-		 
-	}
-	 
-	 
-	 
 	 document.studyForm.submit();
  
  });

@@ -28,18 +28,11 @@ public class StudyEnrollController {
 			
 			
 		}
-		
+		 
 		// 1.  Study Enroll post
-		@RequestMapping(value = "/study_enroll1", method = RequestMethod.POST)
+		@RequestMapping(value = "/enroll1", method = RequestMethod.POST)
 		public String postEnroll(StudyEnrollVO studyEnrollVO) throws Exception{
 			logger.info("---------------post Enroll");
-			
-			System.out.println(studyEnrollVO.getPost()+"/"+studyEnrollVO.getRoadAddress()+"/"+studyEnrollVO.getJibunAddress());
-			
-			String addr ="["+ studyEnrollVO.getPost()+"]"+studyEnrollVO.getRoadAddress()+"("+studyEnrollVO.getJibunAddress()+")";
-			
-			studyEnrollVO.setsPlace(addr);
-			
 			
 			studyService.enroll(studyEnrollVO);
 
@@ -47,9 +40,11 @@ public class StudyEnrollController {
 		}
 		
 		// 2. modify StudyEnroll info
-		@RequestMapping(value = "/modify" ,method = RequestMethod.GET)
+		@RequestMapping(value = "/study_modify" ,method = RequestMethod.GET)
 		public void getModify() throws Exception{
 			logger.info("---------------get modify");		
+			
+	
 			
 		}
 
