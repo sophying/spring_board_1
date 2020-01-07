@@ -2,7 +2,7 @@ package com.board.example.domain;
 
 public class StudyEnrollVO {
 /*
-    SNO  NUMBER  NOT NULL,
+      SNO  NUMBER  NOT NULL,
       USERID VARCHAR2(20)  NOT NULL,
       USERPASS VARCHAR2(100) NOT NULL,
       EMAIL  VARCHAR2(30),

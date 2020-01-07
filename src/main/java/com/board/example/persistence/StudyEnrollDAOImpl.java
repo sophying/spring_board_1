@@ -21,4 +21,11 @@ public class StudyEnrollDAOImpl implements StudyEnrollDAO{
 	}
 
 	
+	@Override
+	public void tenroll(StudyEnrollVO studyEnrollVO)throws Exception {
+		
+		sqlSessoin.insert("study.tenroll", studyEnrollVO);
+	}
+
+	
 }

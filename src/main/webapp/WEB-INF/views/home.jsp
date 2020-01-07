@@ -62,9 +62,15 @@
 </div>
 <div class="form-group row justify-content-md-center m-5">
   <div class="cols-sm-10 d-block p-5">
-    <button id="enroll" type="button" class="btn btn-circle btn-xl"><i class="fa fa-check"></i>
-        <h1>스터디등록</h1>
-          <h1>바로가기</h1>
+    <button id="normalEnroll" type="button" class="btn btn-circle btn-xl"><i class="fa fa-check"></i>
+        <h1>일반회원</h1>
+          <h1>스터디등록</h1>
+    </button>
+  </div>
+  <div class="cols-sm-10 d-block p-5">
+    <button id="teacherEnroll" type="button" class="btn btn-circle btn-xl"><i class="fa fa-check"></i>
+        <h1>강사회원</h1>
+          <h1>스터디등록</h1>
     </button>
   </div>
   <div class="cols-sm-10 d-block p-5">
@@ -142,8 +148,12 @@
 	$(document).ready(function(){
 		
 
-		$('#enroll').click(function() {
+		$('#normalEnroll').click(function() {
 			window.location.href="/study/study_enroll1";
+		});
+		
+		$('#teacherEnroll').click(function() {
+			window.location.href="/study/teacherEnroll";
 		});
 		
 		$('#modify').click(function() {
